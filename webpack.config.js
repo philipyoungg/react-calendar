@@ -1,10 +1,10 @@
-const path = require('path')
+const path = require('path');
 
-const APP_DIR =  path.join(__dirname, 'src/app')
-const BUILD_DIR =  path.join(__dirname, 'dist/app')
+const APP_DIR = path.join(__dirname, 'src/app');
+const BUILD_DIR = path.join(__dirname, 'dist/app');
 
 const config = {
-  entry: APP_DIR + '/index',
+  entry: `${APP_DIR}/index`,
 
   output: {
     path: BUILD_DIR,
@@ -27,6 +27,6 @@ const config = {
       },
     ],
   },
-}
+};
 
-module.exports = config
+module.exports = config;

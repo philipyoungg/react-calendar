@@ -1,54 +1,68 @@
+html {
+  font-family: 'Inconsolata';
+}
+
 * {
-  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-h6 {
-  margin: 0;
-  color: rgb(150, 150, 150);
-  font-weight: normal;
+.year {
+  margin: 0 auto;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
+.inline {
+  display: inline-block;
+  vertical-align:top;
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  max-width: 26rem;
+.month {
+  width: 40px * 7;
 }
 
-li {
-  padding: 0.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+.week-header .day {
+  height: 30px;
+  background: #CCC;
 }
 
-li:hover {
-  background: rgba(0, 0, 0, 0.1);
+.week-header .day:hover {
+  background: #CCC;
 }
 
-a {
-  margin-right: 2rem;
+.day {
+  color: rgb(70, 70, 70);
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding-top: 4px;
+  padding-right: 8px;
+  text-align: right;
+  display: inline-block;
+    box-shadow:
+    1px 0 0 0 #888,
+    0 1px 0 0 #888,
+    1px 1px 0 0 #888,   /* Just to fix the corner */
+    1px 0 0 0 #888 inset,
+    0 1px 0 0 #888 inset;
+
 }
 
-body {
-  padding: 3rem;
+.day:hover {
+  background: hsl(20, 60%, 95%);
 }
 
-input {
-  padding: 0.5rem 0.875rem;
-  font-size: 14px;
+.event {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background: coral;
 }
 
-.todoHeader {
-  margin-bottom: 2rem;
-}
-
-.completedTodo {
-  text-decoration: line-through;
-}
-
-.active {
-  font-weight: bold;
+.day.white {
+  color: transparent;
+  background: #CCC;
 }
